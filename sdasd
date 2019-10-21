@@ -1,0 +1,7 @@
+<div>
+        <InputRange
+        maxValue={1000}
+        minValue={100}
+        value={rating}
+        onChange={hehe => setRating(hehe)} />
+        </div>
