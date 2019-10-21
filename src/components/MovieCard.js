@@ -37,7 +37,7 @@ export default function MovieCard(props) {
                     <Col lg={10} className="contentCol">
                         <Row>
                             <Col sm={12}>
-                                
+
                                 <p className="range">IMDb Rating</p>
                                 <InputRange
                                     maxValue={10}
@@ -56,14 +56,16 @@ export default function MovieCard(props) {
                                         <Card className="mb-3 bg-dark text-white card">
                                             <Card.Img variant="top" src={`https://image.tmdb.org/t/p/w500${el.poster_path}`} />
                                             <Card.ImgOverlay>
-                                            <p className="rate">{el.vote_average}</p>
+                                                <p className="rate">{el.vote_average}</p>
                                                 <Card.Text>
                                                     <div className="cardText">
                                                         <h6 className="card-title">{el.original_title} </h6>
                                                         <p className="card-text">{el.release_date}</p>
                                                         <p className="card-text overview"> {el.overview}
-                                                        </p>    
-                                                        <button className="card-trailer"> TRAILER</button>
+                                                        </p>
+                                                        <button className="card-trailer" 
+                                                            onClick={async() => {await props.getVideoKey(el.id); await props.setModalShow(true);}}
+                                                        > TRAILER </button>
                                                     </div>
                                                 </Card.Text>
                                             </Card.ImgOverlay>

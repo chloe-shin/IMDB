@@ -312,3 +312,7 @@ box-shadow: 5px 10px 10px rgba(0,0,0,0.5) !important;
   position: static;
   box-shadow: 1px 8px 10px rgba(0,0,0,0.5);
 }
+iframe{
+  width: auto;
+  height: 70vh;
+}

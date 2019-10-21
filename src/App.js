@@ -7,7 +7,9 @@ import MovieCard from './components/MovieCard';
 import Navibar from './components/Navibar';
 import Hero from './components/Hero';
 import FilterSection from './components/FilterSection';
-import 'react-input-range/lib/css/index.css'
+import 'react-input-range/lib/css/index.css';
+import ModalTrailer from './components/Modal';
+
 
 //import bootstrap
 //call API
@@ -20,19 +22,27 @@ import 'react-input-range/lib/css/index.css'
 
 
 export default function App() {
-
+  // Declared--------------
+  const api = process.env.REACT_APP_API;
   const [movie, setMovie] = useState([])
   const [page, setPage] = useState(1)
   const [origMovies, setOrigMovies] = useState([]);
   const [ratingVal, setRatingVal] = useState({ min: 0, max: 10});
-
+  const [keyVideo, setKeyVideo] = useState('');
+  const [modalShow, setModalShow] = React.useState(false);
+ //----------------------
   useEffect(() => {
     getData()
   }, [])
   
+  //get API video key function
+  const getVideoKey = async(idMovie) => {
+    const reponsive = await fetch(`https://api.themoviedb.org/3/movie/${idMovie}/videos?language=en-US&api_key=${api}`);
+    const data = await reponsive.json();
+    setKeyVideo(data.results[0].key);
+  }
 
   const getData = async () => {
-    const api = process.env.REACT_APP_API
     const url = `https://api.themoviedb.org/3/discover/movie?api_key=${api}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`
     const response = await fetch(url)
     const data = await response.json()
@@ -67,15 +77,20 @@ export default function App() {
           movies={movie}
           />
 
+      <ModalTrailer
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+        keyVideo={keyVideo}
+      />
 
         <MovieCard 
         movie={movie} 
-
         origMovies= {origMovies}
         setMovie= {setMovie}
         ratingVal={ratingVal}
         setRatingVal= {setRatingVal}
-        
+        setModalShow={setModalShow}
+        getVideoKey={getVideoKey}
         />
         
         <button className="seeMore" onClick={() => getData()}> See more </button>
