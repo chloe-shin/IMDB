@@ -1,7 +1,7 @@
 # CoderSchool FTW - * IMDB - Chloe's Movie World *
 
 Created with love by: Chloe Shin
-Please check my website at: 
+Please check my website at: https://chloe-imdb.netlify.com
 
 
 
