@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 .App {
   text-align: center;
 
@@ -45,7 +47,7 @@
 .seeMore {
   background-color: orange;
   border-radius: 100px;
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   padding: 10px;
   border-style: none;
   color: white;
@@ -60,7 +62,7 @@
 }
 
 .navbar-brand {
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
   margin: 10px;
@@ -69,13 +71,13 @@
 .search {
   background-color: orange !important;
   border-style: none !important ;
-  font-family: montserrat !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 10px !important;
 }
 
 .inputSearch {
   border-style: none !important ;
-  font-family: montserrat !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 11px !important;
 }
 
@@ -100,7 +102,7 @@
 }
 
 .hero-overview {
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 13px;
   text-align: left;
 }
@@ -110,7 +112,7 @@
 
 h1 { /*title font*/
   font-size: 18px;
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
 }
 
@@ -119,7 +121,7 @@ h1 { /*title font*/
 
   color: white;
   font-size: 40px;
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .background {
@@ -136,7 +138,7 @@ h1 { /*title font*/
 
 .background-text{
   color: white;
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -178,7 +180,7 @@ h1 { /*title font*/
  
 }
 h5 {
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   padding-bottom: 20px;
   letter-spacing: 1px;
   font-weight: 700;
@@ -187,7 +189,7 @@ h5 {
 /*Input range*/
 
 .range {
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   font-size: 15px;
 }
 
@@ -208,7 +210,7 @@ h5 {
 }
 
 .input-range__label-container {
-  font-family: montserrat !important;
+  font-family: 'Montserrat', sans-serif !important;
   font-size: 10px !important;
   color: transparent;
 
@@ -248,6 +250,7 @@ border-style: none !important;
 box-shadow: 5px 10px 10px rgba(0,0,0,0.5) !important;
 }
 
+
 .card-img-overlay:hover {
   background-color: rgba(0,0,0,0.9);
 }
@@ -255,9 +258,8 @@ box-shadow: 5px 10px 10px rgba(0,0,0,0.5) !important;
   font-weight: 800;
 }
 .card-text {
-  margin-top: 10px;
   font-size: 12px;
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .card-img-overlay .card-text {
@@ -266,14 +268,17 @@ box-shadow: 5px 10px 10px rgba(0,0,0,0.5) !important;
 
 .card-img-overlay:hover .card-text {
   visibility: visible;
-}
+} 
+
+
 
 .overview {
   font-size: 10px;
+
 }
 
 .cardText {
-  margin-top: -20px !important;
+  margin-top: -30px !important;
 } 
 
 .card-trailer {
@@ -285,7 +290,7 @@ box-shadow: 5px 10px 10px rgba(0,0,0,0.5) !important;
   color: white;
   font-size: 8px;
   font-weight: 700;
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   letter-spacing: 2px;
 }
 
@@ -298,7 +303,7 @@ box-shadow: 5px 10px 10px rgba(0,0,0,0.5) !important;
 .rate {
   background: orange;
   color: white;
-  font-family: montserrat;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   font-size: 10px;
   font-weight: 700;

@@ -62,23 +62,22 @@ export default function App() {
       <header className="App-header">
 
         
-          <Hero 
-          movie={movie[0]} 
-          movies={movie}
-          />
+      <Hero 
+      movie={movie[0]} 
+      movies={movie}
+      />
 
 
-        <MovieCard 
-        movie={movie} 
-
-        origMovies= {origMovies}
-        setMovie= {setMovie}
-        ratingVal={ratingVal}
-        setRatingVal= {setRatingVal}
+      <MovieCard 
+      movie={movie} 
+      origMovies= {origMovies}
+      setMovie= {setMovie}
+      ratingVal={ratingVal}
+      setRatingVal= {setRatingVal}
+      
+      />
         
-        />
-        
-        <button className="seeMore" onClick={() => getData()}> See more </button>
+      <button className="seeMore" onClick={() => getData()}> See more </button>
       </header>
     </div>
   );
